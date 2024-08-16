@@ -14,7 +14,7 @@ const rps2 = (p1, p2) => {
 }
 
 //My rock paper scissors function has two parameter (p1,p2)
-//The rule of rps is scissors beats paper, paper beats rock and rock beats scissors
+//The rule of rps is scissors beats paper, paper beats rock, and rock beats scissors
 //first we return draw if p1 and p2 have the same choice
 //then the following conditions check if player 1's choice beats player 2's choice and if any of the conditions are true it returns "player 1 won!"
 //the else statement is a default that will run if non of the above conditions are met i.e no draws or player 1 wins. It returns "player 2 won!"
