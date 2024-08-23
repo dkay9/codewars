@@ -22,18 +22,9 @@
 // If you make it, return "Alive!", if not, return "Shark Bait!".
 
 function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
-    sharkSpeed = (dolphin) && sharkSpeed / 2 
-    let attackDistance = sharkDistance - pontoonDistance
-    let closingDistance = sharkSpeed - youSpeed
-    let safetyTime = pontoonDistance / youSpeed
-    let sharkTime = attackDistance / closingDistance
-    return safetyTime < sharkTime ? "Alive!" : "Shark Bait!"
+    sharkSpeed = (dolphin) ? sharkSpeed / 2 : sharkSpeed
+    return (sharkDistance / sharkSpeed) < (pontoonDistance / youSpeed) ? "Shark Bait!" : "Alive!"
 }
 
-//In the shark function first checks if dolphin(which is truthy) is present then the sharkSpeed is halved
-//the attackDistance checks for how long it'll take the shark to get to you relative to the pontoon distance(your distance to the pontoon)
-//closingDistance checks the rate at which the shark is closing in on you(difference in sharkSpeed and youSpeed)
-//safetyTime checks how long it'll take you to get to the pontoon
-//sharkTime checks how long it'll take the shark to get to you
-//The return statement checks with a tunary operator if your safetyTime is less than sharkTime 
-//if safetyTime is less than sharkTime it returns "Alive!" else it returns "Shark Bait!"
+// sharkSpeed is reduced if there's a dolphin which is a truthy statement else sharkSpeed remains the same
+// the return statement basically means if the sharkDistance divided by the sharkSpeed is less than than pontoonDistance divided by my speed then it returns Shark Bait! else it returns Alive!
