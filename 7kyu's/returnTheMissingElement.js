@@ -13,3 +13,8 @@ function getMissingElement(superImportantArray){
     const fullArray = [0,1,2,3,4,5,6,7,8,9]
     return fullArray.find(num => !superImportantArray.includes(num))
 }
+
+function getMissingElement(a){
+    for(let i=0;i<10;i++)
+      if(!a.includes(i)) return i;
+}
