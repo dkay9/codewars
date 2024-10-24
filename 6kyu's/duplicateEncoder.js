@@ -10,7 +10,7 @@
 
 function duplicateEncoded(word){
     word = word.toLowerCase()
-    return word.split('').map(function(char, index, arr){
+    return word.split('').map((char, index, arr) => {
         return arr.indexOf(char) === arr.lastIndexOf(char) ? '(' : ')'
     }).join('')
 }
