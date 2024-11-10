@@ -17,3 +17,6 @@ function getLargerNumbers(a, b) {
    }
    return newArr
 }
+
+// better code with turnary operation
+const getLargerNumbers = (arr1, arr2) => arr1.map((el, i) => arr2[i] < el ? el : arr2[i])
