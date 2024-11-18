@@ -16,3 +16,6 @@ function isIsogram(str){
     }
     return true // if the loop completes without finding a duplicate return true
 }
+
+//refactored
+const isIsogram = str => new Set(str.toUppercase()).size == str.length
