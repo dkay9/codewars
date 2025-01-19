@@ -15,4 +15,4 @@ function reverseSlice(str) {
       result.push(rev.slice(i));
     }
     return result;
-  }
+}
